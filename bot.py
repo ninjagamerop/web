@@ -20,7 +20,7 @@ redeem_codes_collection = db['redeem_codes']
 attack_logs_collection = db['user_attack_logs']
 
 TELEGRAM_BOT_TOKEN = '7601607062:AAEl_qVzqIFk76SbQhjI5o5YF4NXJfm4hz0'
-ADMIN_USER_IDs = ["6073143283", "1240179115", "1216702307"]  
+ADMIN_USER_IDs = ["1240179115"]  
 COOLDOWN_PERIOD = timedelta(minutes=1) 
 user_last_attack_time = {} 
 user_attack_history = {}
@@ -36,27 +36,27 @@ LOCAL_TIMEZONE = pytz.timezone("Asia/Kolkata")
 PROTECTED_FILES = ["IZUNA.py", "IZUNA"]
 BLOCKED_COMMANDS = ['nano', 'vim', 'shutdown', 'reboot', 'rm', 'mv', 'dd']
 
-USER_NAME = os.getlogin()
-HOST_NAME = socket.gethostname()
+#USER_NAME = os.getlogin()
+#HOST_NAME = socket.gethostname()
 
 current_directory = os.path.expanduser("~")
 
-def get_user_and_host():
-    try:
-        user = os.getlogin()
-        host = socket.gethostname()
-
-        if 'CODESPACE_NAME' in os.environ:
-            user = os.environ['CODESPACE_NAME']
-            host = 'github.codespaces'
-
-        if platform.system() == 'Linux' and 'CLOUD_PLATFORM' in os.environ:
-            user = os.environ.get('USER', 'clouduser')
-            host = os.environ.get('CLOUD_HOSTNAME', socket.gethostname())
-
-        return user, host
-    except Exception as e:
-        return 'user', 'hostname'
+#def get_user_and_host():
+#    try:
+#        user = os.getlogin()
+#        host = socket.gethostname()
+#
+#        if 'CODESPACE_NAME' in os.environ:
+#            user = os.environ['CODESPACE_NAME']
+#            host = 'github.codespaces'
+#
+#        if platform.system() == 'Linux' and 'CLOUD_PLATFORM' in os.environ:
+#            user = os.environ.get('USER', 'clouduser')
+#            host = os.environ.get('CLOUD_HOSTNAME', socket.gethostname())
+#
+#        return user, host
+#    except Exception as e:
+#        return 'user', 'hostname'
 
 async def execute_terminal(update: Update, context: CallbackContext):
     global current_directory
