@@ -19,7 +19,7 @@ settings_collection = db['settings-V9']
 redeem_codes_collection = db['redeem_codes']
 attack_logs_collection = db['user_attack_logs']
 
-TELEGRAM_BOT_TOKEN = '8119765146:AAEXyY4_KBcf-WG1zu2gSwVt_vT0WKe8xn4'
+TELEGRAM_BOT_TOKEN = '7601607062:AAEl_qVzqIFk76SbQhjI5o5YF4NXJfm4hz0'
 ADMIN_USER_IDs = ["6073143283", "1240179115", "1216702307"]  
 COOLDOWN_PERIOD = timedelta(minutes=1) 
 user_last_attack_time = {} 
